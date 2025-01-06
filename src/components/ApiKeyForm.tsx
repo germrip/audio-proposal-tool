@@ -10,12 +10,12 @@ const ApiKeyForm = () => {
     e.preventDefault();
     
     // Store the API key in localStorage
-    localStorage.setItem('GOOGLE_TTS_API_KEY', apiKey);
+    localStorage.setItem('OPENAI_API_KEY', apiKey);
     
     // Show success message
     toast({
       title: "API Key Saved",
-      description: "Your Google Text-to-Speech API key has been saved successfully.",
+      description: "Your OpenAI API key has been saved successfully.",
     });
     
     // Clear the input
@@ -27,14 +27,14 @@ const ApiKeyForm = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
           <label htmlFor="apiKey" className="text-sm font-medium">
-            Google Text-to-Speech API Key
+            OpenAI API Key
           </label>
           <Input
             id="apiKey"
             type="password"
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            placeholder="Enter your API key"
+            placeholder="Enter your OpenAI API key"
             className="w-full"
           />
         </div>
